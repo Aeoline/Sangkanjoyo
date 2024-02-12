@@ -83,6 +83,7 @@
 				<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="pengaturanDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pengaturan</a>
 				<div class="dropdown-menu" aria-labelledby="pengaturanDropdown">
+					<a class="dropdown-item" href="?halaman=setting_index">Pengaturan Halaman Depan</a>
 					<a class="dropdown-item" href="logout.php">Keluar</a>
 				</div>
 				</li>
@@ -236,6 +237,12 @@
 			  case 'permohonan_surat';
                 include 'permohonan_surat.php';
               break;
+			  case 'logout';
+				include 'logout.php';
+			  break;
+			  case 'setting_index';
+				include 'setting_index.php';
+			  break;
               default:
                 echo "<center>HALAMAN KOSONG</center>";
               break;

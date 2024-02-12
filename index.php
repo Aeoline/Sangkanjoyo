@@ -1,3 +1,23 @@
+<?php include '../konek.php';?>
+
+<?php
+    $tampil_index = "SELECT * FROM data_index";
+    $query = mysqli_query($konek, $tampil_index);
+    $data = mysqli_fetch_array($query, MYSQLI_BOTH);
+    $deskripsi = $data['deskripsi'];
+    $id = $data['id'];
+    $judul = $data['judul'];
+
+    $tampil_info = "SELECT * FROM data_warga";
+    $query_info = mysqli_query($konek, $tampil_info);
+    $data_info = mysqli_fetch_array($query_info, MYSQLI_BOTH);
+    $balita = $data_info['balita'];
+    $anak = $data_info['anak'];
+    $dewasa = $data_info['dewasa'];
+    $lansia = $data_info['lansia'];
+    $total = $balita + $anak + $dewasa + $lansia;
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -209,7 +229,7 @@
         <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="well-left">
             <div class="single-well">
-              <a href="#">
+              <a>
 								  <img src="img/about/gapura.PNG" alt="">
 								</a>
             </div>
@@ -219,13 +239,13 @@
         <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="well-middle">
             <div class="single-well">
-              <a href="#">
-                <h4 class="sec-head">Desa Indah Di Kabupaten Kajen</h4>
+              <a>
+                <h4 class="sec-head"><?php echo $judul?></h4>
               </a>
               <p>
-                Desa Sangkanjoyo merupakan sebuah desa yang terletak di Kabupaten Pekalongan, Tepatnya di Kecamatan Kajen. Desa Sangkanjoyo memiliki luas wilayah 1.000 Ha, dengan jumlah penduduk 3.000 jiwa. Desa Sangkanjoyo memiliki 4 RW dan 12 RT. Desa Sangkanjoyo memiliki 2 Dusun, yaitu Dusun Sangkan dan Dusun Joyo.
+                <?php echo $deskripsi?>
               </p>
-              <ul>
+              <!-- <ul>
                 <li>
                   <i class="fa fa-check"></i> Balai Desa
                 </li>
@@ -238,7 +258,7 @@
                 <li>
                   <i class="fa fa-check"></i> Lapangan dan Taman Baca
                 </li>
-              </ul>
+              </ul> -->
             </div>
           </div>
         </div>
@@ -264,7 +284,7 @@
             <div class="col-xs-12 col-sm-3 col-md-3 text-center">
               <div class="single-skill">
                 <div class="progress-circular">
-                  <input type="text" class="knob" value="0" data-rel="20" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
+                  <input type="text" class="knob" value="0" data-rel="<?php echo (($lansia/$total)* 100)?>" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
                   <h3 class="progress-h4">Lansia</h3>
                 </div>
               </div>
@@ -274,7 +294,7 @@
             <div class="col-xs-12 col-sm-3 col-md-3 text-center">
               <div class="single-skill">
                 <div class="progress-circular">
-                  <input type="text" class="knob" value="0" data-rel="30" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
+                  <input type="text" class="knob" value="0" data-rel="<?php echo (($dewasa/$total) * 100)?>" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
                   <h3 class="progress-h4">Dewasa</h3>
                 </div>
               </div>
@@ -284,7 +304,7 @@
             <div class="col-xs-12 col-sm-3 col-md-3 text-center">
               <div class="single-skill">
                 <div class="progress-circular">
-                  <input type="text" class="knob" value="0" data-rel="30" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
+                  <input type="text" class="knob" value="0" data-rel="<?php echo (($anak/$total) * 100)?>" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
                   <h3 class="progress-h4">Anak-anak</h3>
                 </div>
               </div>
@@ -294,7 +314,7 @@
             <div class="col-xs-12 col-sm-3 col-md-3 text-center">
               <div class="single-skill">
                 <div class="progress-circular">
-                  <input type="text" class="knob" value="0" data-rel="20" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
+                  <input type="text" class="knob" value="0" data-rel="<?php echo (($balita/$total)* 100)?>" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
                   <h3 class="progress-h4">Balita</h3>
                 </div>
               </div>

@@ -116,9 +116,9 @@
 
                     <div class="wrap-input100 validate-input" data-validate="Enter password">
                         <span class="btn-show-pass">
-                            <i class="zmdi zmdi-eye"></i>
+                            <i id="togglePassword" class="zmdi zmdi-eye"></i>
                         </span>
-                        <input class="input100" type="password" name="password">
+                        <input id="passwordInput" class="input100" type="password" name="password">
                         <span class="focus-input100" data-placeholder="Password"></span>
                     </div>
 
@@ -157,6 +157,23 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- endinject -->
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+
+    <script>
+    var togglePassword = document.getElementById("togglePassword");
+    var passwordInput = document.getElementById("passwordInput");
+
+    togglePassword.addEventListener("click", function () {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            togglePassword.classList.remove("zmdi-eye");
+            togglePassword.classList.add("zmdi-eye-off");
+        } else {
+            passwordInput.type = "password";
+            togglePassword.classList.remove("zmdi-eye-off");
+            togglePassword.classList.add("zmdi-eye");
+        }
+    });
+    </script>
 </body>
 </html>
 <!-- oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "16"  -->

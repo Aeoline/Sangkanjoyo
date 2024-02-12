@@ -13,6 +13,11 @@
     $telepon = $data['telepon'];
     $agama = $data['agama'];
     $status_warga = $data['status_warga'];
+    $pekerjaan = $data['pekerjaan'];
+    $no_kk = $data['no_kk'];
+    $tanggal_lahir = date('d F Y', strtotime($tanggal));
+    $rt = $data['rt'];
+    $rw = $data['rw'];
 
 ?>
 <div class="page-inner">
@@ -37,18 +42,23 @@
                                 <td><?= $nik;?></td>
                             </tr>
                             <tr>
+                                <th>NO_KK</th>
+                                <td>:</td>
+                                <td><?= $no_kk;?></td>
+                            </tr>
+                            <tr>
                                 <th>NAMA</th>
                                 <td>:</td>
                                 <td><?= $nama;?></td>
                             </tr>
                             <tr>
-                                <th>TTL</th>
+                                <th>TEMPAT, TANGGAL LAHIR</th>
                                 <td>:</td>
-                                <td><?= $tempat.', '.$format;?></td>
+                                <td><?= $tempat.', '.$tanggal_lahir;?></td>
                             </tr>
 
                             <tr>
-                                <th>JEKEL</th>
+                                <th>JENIS KELAMIN</th>
                                 <td>:</td>
                                 <td><?= $jekel;?></td>
                             </tr>
@@ -63,6 +73,11 @@
                                 <td><?= $alamat;?></td>
                             </tr>
                             <tr>
+                                <th>RT/RW</th>
+                                <td>:</td>
+                                <td><?= $rt; ?>/<?= $rw; ?></td>
+                            </tr>
+                            <tr>
                                 <th>TELEPON</th>
                                 <td>:</td>
                                 <td><?= $telepon;?></td>
@@ -72,6 +87,12 @@
                                 <td>:</td>
                                 <td><?= $status_warga;?></td>
                             </tr>
+                            <tr>
+                                <th>PEKERJAAN</th>
+                                <td>:</td>
+                                <td><?= $pekerjaan;?></td>
+                            </tr>
+                            
                         </thead>
                     </table>
                 </div>

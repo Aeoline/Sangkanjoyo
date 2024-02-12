@@ -6,6 +6,7 @@
 		$query = mysqli_query($konek,$tampil_nik);
 		$data = mysqli_fetch_array($query,MYSQLI_BOTH);
 		$nik = $data['nik'];
+		$no_kk = $data['no_kk'];
 		$nama = $data['nama'];
 		$tempat = $data['tempat_lahir'];
 		$tanggal = $data['tanggal_lahir'];
@@ -14,6 +15,10 @@
 		$alamat = $data['alamat'];
 		$telepon = $data['telepon'];
 		$status_warga = $data['status_warga'];
+		$pekerjaan = $data['pekerjaan'];
+		$rt = $data['rt'];
+		$rw = $data['rw'];
+		
 	}
 	
 ?>
@@ -25,7 +30,7 @@
 					<div class="row">
 						<div class="col-md-12">	
 						<form method="POST">
-							<div class="card">
+							<div class="card" style="margin-top: 20px; margin-bottom: 20px;">
 								<div class="card-header">
 									<div class="card-title">UBAH BIODATA</div>
 								</div>
@@ -35,6 +40,10 @@
 												<div class="form-group">
 													<label>NIK</label>
 													<input type="number" name="nik" class="form-control" placeholder="NIK Anda.." value="<?= $nik;?>" readonly>
+												</div>
+												<div class="form-group">
+													<label>NO KK</label>
+													<input type="text" name="no_kk" class="form-control" placeholder="NO KK Anda.." value="<?= $no_kk;?>">
 												</div>
 												<div class="form-group">
 													<label>Nama Lengkap</label>
@@ -76,6 +85,17 @@
 													<label for="comment">Alamat</label>
 													<textarea class="form-control" name="alamat" rows="5"><?= $alamat?></textarea>
 												</div>				
+												<div>
+												
+													<div class="form-group" style="display: inline-block; width: 48.5%;">
+														<label>RT</label>
+														<input type="text" name="rt" class="form-control" value="<?php echo $rt; ?>" placeholder="RT Anda..">
+													</div>
+													<div class="form-group" style="display: inline-block; width: 48.5%; margin-left: 10px;">
+														<label>RW</label>
+														<input type="text" name="rw" class="form-control" value="<?php echo $rw; ?>" placeholder="RW Anda..">
+													</div>
+												</div>
 												<div class="form-group">
 													<label>Telepon</label>
 													<input type="number" name="telepon" class="form-control" value="<?= $telepon?>" placeholder="Telepon Anda..">
@@ -84,17 +104,21 @@
 													<label>Status Warga</label>
 													<select name="status_warga" class="form-control">
 														<option disabled="" selected="">Pilih Status Warga</option>
-														<option value='Sekolah'>Sekolah</option>
-														<option value='Kerja'>Kerja</option>
-														<option value='Belum Bekerja'>Belum Bekerja</option>
+														<option <?php if( $status_warga=='Sekolah'){echo "selected"; } ?> value='Sekolah'>Sekolah</option>
+														<option <?php if( $status_warga=='Kerja'){echo "selected"; } ?> value='Kerja'>Kerja</option>
+														<option <?php if( $status_warga=='Belum Bekerja'){echo "selected"; } ?> value='Belum Bekerja'>Belum Bekerja</option>
 													</select>
+												</div>
+												<div class="form-group">
+													<label>Pekerjaan</label>
+													<input type="text" name="pekerjaan" class="form-control" value="<?= $pekerjaan;?>" placeholder="Pekerjaan Anda..">
 												</div>
 											</div>
 									</div>
 								</div>
 								<div class="card-action">
-									<button name="ubah" class="btn btn-success">Ubah</button>
-									<a href="?halaman=beranda" class="btn btn-default">Batal</a>
+									<button name="ubah" class="btn btn-success ml-3 px-3 mb-2">Ubah</button>
+									<a href="?halaman=beranda" class="btn btn-danger px-3 mb-2">Batal</a>
 								</div>
 							</div>
 						</div>
@@ -105,6 +129,7 @@
 <?php
 if(isset($_POST['ubah'])){
 	$nik = $_POST['nik'];
+	$no_kk = $_POST['no_kk'];
 	$nama = $_POST['nama'];
 	$tempat = $_POST['tempat'];
 	$tgl = $_POST['tgl'];
@@ -113,6 +138,9 @@ if(isset($_POST['ubah'])){
 	$alamat = $_POST['alamat'];
 	$telepon = $_POST['telepon'];
 	$status_warga = $_POST['status_warga'];
+	$pekerjaan= $_POST['pekerjaan'];
+	$rt = $_POST['rt'];
+	$rw = $_POST['rw'];
 
 	$sql = "UPDATE data_user SET
 	nama='$nama',
@@ -122,8 +150,13 @@ if(isset($_POST['ubah'])){
 	agama='$agama',
 	alamat='$alamat',
 	telepon='$telepon',
-	status_warga='$status_warga'
+	status_warga='$status_warga',
+	no_kk = '$no_kk',
+	pekerjaan = '$pekerjaan',
+	rt = '$rt',
+	rw = '$rw'
 	WHERE nik=$_SESSION[nik]";
+	
 	$query = mysqli_query($konek,$sql);
 
 	if($query){

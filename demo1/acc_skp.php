@@ -5,10 +5,10 @@
                 <div class="page-inner">
 					<div class="row">
 						<div class="col-md-12">
-							<div class="card">
+							<div class="card mt-3">
 								<div class="card-header">
 									<div class="d-flex align-items-center">
-									<h4 class="fw-bold text-uppercase">TAMPIL ACC REQUEST SURAT KETERANGAN LAINNYA</h4>
+									<h4 class="fw-bold text-uppercase">TAMPIL ACC REQUEST SURAT KETERANGAN PENGHASILAN</h4>
 									</div>
 								</div>
 								<div class="card-body">
@@ -58,10 +58,11 @@
 													<td><?php echo $keperluan;?></td>
 													<td>
 															<input type="checkbox" name="check[$i]" value="<?php echo $id_request_skp;?>">
-															<input type="submit" name="acc" class="btn btn-primary btn-sm" value="ACC">
+															<input type="submit" name="acc" class="btn btn-primary btn-m" value="ACC">
 															<div class="form-button-action">
-																<a type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Cek Data" href="?halaman=detail_skp&id_request_skp=<?= $id_request_skp;?>">
-																<i class="fa fa-edit"></i></a>
+                                                                    <a href="?halaman=detail_skp&id_request_skp=<?= $id_request_skp;?>" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary px-3 mb-1 mt-1 text-white" data-original-title="Detail">
+                                                                        Detail
+                                                                    </a>
 															</div>
 													</td>
                                                 </tr>

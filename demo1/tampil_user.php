@@ -59,7 +59,7 @@
                                                     </div>
                                                     <div class="modal-footer no-bd">
                                                         <button type="button" id="addRowButton" class="btn btn-primary">Add</button>
-                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-danger " data-dismiss="modal">Close</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -75,7 +75,6 @@
                                                             <th>Alamat</th>
                                                             <th>Jenis Kelamin</th>
                                                             <th>Status Warga</th>
-                                                            <th>Password</th>
                                                             <th>Hak Akses</th>
                                                             <th style="width: 10%">Action</th>
                                                         </tr>
@@ -83,12 +82,11 @@
                                                     <tbody>
                                                         <?php
                                                             $no=1;
-                                                            $tampil = "SELECT * FROM data_user";
+                                                            $tampil = "SELECT * FROM data_user WHERE hak_akses != 'Sekdes' AND hak_akses !='Staf'";
                                                             $query = mysqli_query($konek,$tampil);
                                                             while($data=mysqli_fetch_array($query,MYSQLI_BOTH)){
                                                                 $username = $data['nik'];
                                                                 $nama = $data['nama'];
-                                                                $password = $data['password'];
                                                                 $tempat = $data['tempat_lahir'];
                                                                 $tanggal = $data['tanggal_lahir'];
                                                                 $alamat = $data['alamat'];
@@ -104,15 +102,14 @@
                                                             <td><?php echo $alamat;?></td>
                                                             <td><?php echo $jekel;?></td>
                                                             <td><?php echo $status_warga;?></td>
-                                                            <td><?php echo $password;?></td>
                                                             <td><?php echo $hak_akses;?></td>
                                                             <td>
                                                                 <div class="form-button-action">
-                                                                    <a href="?halaman=ubah_user&nik=<?php echo $username;?>" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit User">
-                                                                        <i class="fa fa-edit"></i>
+                                                                    <a href="?halaman=ubah_user&nik=<?php echo $username;?>" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary px-4 mb-1 text-white" data-original-title="Edit User">
+                                                                        Edit
                                                                     </a>
-                                                                    <a href="?halaman=tampil_user&nik=<?php echo $username;?>" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus User">
-                                                                        <i class="fa fa-times"></i>
+                                                                    <a href="?halaman=tampil_user&nik=<?php echo $username;?>" data-toggle="tooltip" title="" class="btn btn-link btn-danger text-white px-3" data-original-title="Hapus User">
+                                                                        Hapus
                                                                     </a>
                                                                 </div>
                                                             </td>

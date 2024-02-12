@@ -10,15 +10,23 @@ if (isset($_POST['login'])) {
     $kota = $_POST['kota'];
     $tgl = $_POST['tgl'];
 
-    $sql_simpan = "INSERT INTO data_user (nik,password,hak_akses,nama,tanggal_lahir,jekel,tempat_lahir) VALUES ('$nik','$password','$hak_akses','$nama','$tgl','$jekel','$kota')";
-    $query_simpan = mysqli_query($konek,$sql_simpan);
+    // Periksa apakah NIK sudah terdaftar sebelumnya
+    $sql_cek = "SELECT * FROM data_user WHERE nik = '$nik'";
+    $query_cek = mysqli_query($konek, $sql_cek);
 
-    if($query_simpan){
-        echo "<script language='javascript'>swal('Selamat...', 'Akun Berhasil dibuat!', 'success');</script>" ;
-        echo '<meta http-equiv="refresh" content="3; url=login.php">';
-    }else{
-        echo "<script language='javascript'>swal('Gagal...', 'Akun Gagal dibuat!', 'error');</script>" ;
-        echo '<meta http-equiv="refresh" content="3; url=register.php">';
+    if (mysqli_num_rows($query_cek) > 0) {
+        echo "<script>alert('NIK sudah terdaftar! Silahkan cek kembali NIK anda!');</script>";
+    } else {
+        $sql_simpan = "INSERT INTO data_user (nik, password, hak_akses, nama, tanggal_lahir, jekel, tempat_lahir) VALUES ('$nik', '$password', '$hak_akses', '$nama', '$tgl', '$jekel', '$kota')";
+        $query_simpan = mysqli_query($konek, $sql_simpan);
+
+        if ($query_simpan) {
+          echo "<script language='javascript'>swal('Selamat...', 'Akun Berhasil dibuat!', 'success');</script>";
+          echo '<meta http-equiv="refresh" content="3; url=login.php">';
+      } else {
+          echo "<script language='javascript'>swal('Gagal...', 'Akun Gagal dibuat!', 'error');</script>";
+          echo '<meta http-equiv="refresh" content="3; url=register.php">';
+      }
     }
 }
 ?>
@@ -49,7 +57,7 @@ if (isset($_POST['login'])) {
             Registrasi Akun
           </span>
           <span class="login100-form-title p-b-48">
-            <i class="zmdi zmdi-font"></i>
+            <img src="demo1/img/pekalongan.png" style="width: 150px; height: auto;"  alt="Pekalongan" />
           </span>
 
           <div class="wrap-input100 validate-input" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="16" required autofocus>
@@ -101,7 +109,7 @@ if (isset($_POST['login'])) {
             </span>
 
             <a class="txt2" href="login.php">
-              Login
+              Masuk Disini
             </a>
           </div>
         </form>

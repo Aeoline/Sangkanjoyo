@@ -26,7 +26,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
+
+
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -69,7 +73,7 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <!--===============================================================================================-->
 </head>
-</head>
+
 
 <style type="text/css">
   body{
@@ -78,7 +82,9 @@
 </style>
 
 
+
 <body>
+<div id="preloader"></div>
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
@@ -87,7 +93,7 @@
                         Masuk
                     </span>
                     <span class="login100-form-title p-b-48">
-                        <i class="zmdi zmdi-font"></i>
+                        <img src="demo1/img/pekalongan.png" style="width: 150px; height: auto;"  alt="Pekalongan" />
                     </span>
 
                     <div class="wrap-input100">
@@ -95,7 +101,7 @@
                             <select name="hak_akses" id="" class="form-control text-uppercase">
                                 <option value="" selected="selected">Login sebagai</option>
                                 <?php
-                                $SQL = "SELECT * FROM data_user WHERE hak_akses='Staf' OR hak_akses='Lurah'";
+                                $SQL = "SELECT * FROM data_user WHERE hak_akses='Staf' OR hak_akses='Sekdes'";
                                 $QUERY = mysqli_query($konek, $SQL);
                                 while ($data = mysqli_fetch_array($QUERY, MYSQLI_BOTH)) {
                                     $hak_akses = $data['hak_akses'];

@@ -10,7 +10,11 @@
  <?php include '../konek.php';?>
 <!doctype html>
 <html lang="en">
+
+<div id="preloader"></div>
   <head>
+
+  
   	<title>Desa Sangkanjoyo</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,9 +32,13 @@
 			<div class="row justify-content-between">
 				<div class="col-md-8 order-md-last">
 					<div class="row">
-						<div class="col-md-6 text-center">
+					<div class="col-md-6 text-center">
+						<a class="navbar-brand" href="main2.php">
+							<br> <!-- Tambahkan baris ini untuk memberikan sedikit ruang di atas gambar -->
+							<img src="../demo1/img/pekalongan.png" width="100" height="auto" alt="Desa Sangkanjoyo">
 							<a class="navbar-brand" href="main2.php">Desa Sangkanjoyo <span>Kecamatan Kajen, Kabupaten Pekalongan</span></a>
-						</div>
+						</a>
+					</div>
 						<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
 							<form action="#" class="searchform order-lg-last">
 			          
@@ -54,7 +62,7 @@
 		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container-fluid">
 			<?php
-			if ($hak_akses == "Lurah") {
+			if ($hak_akses == "Sekdes") {
 			?>
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,7 +70,7 @@
 			</button>
 			<div class="collapse navbar-collapse" id="ftco-nav">
 			<ul class="navbar-nav m-auto">
-				<li class="nav-item active"><a href="?halaman=beranda" class="nav-link">Dashboard</a></li>
+				<li class="nav-item"><a href="?halaman=beranda" class="nav-link">Dashboard</a></li>
 
 				<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="laporanDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Laporan</a>

@@ -28,7 +28,7 @@
 					<h3 class="fw-bold text-uppercase">TAMPIL REQUEST SURAT KETERANGAN PEMOHON</h3>
 					<!-- Card With Icon States Background -->
 					<div class="row">
-						<div class="col-sm-6 col-md-3">
+						<div class="col-md-4 mb-3">
 								<div class="card card-stats card-round">
 									<div class="card-body ">
 										<div class="row align-items-center">
@@ -63,7 +63,7 @@
 									</div>
 								</div>
 						</div>
-						<div class="col-sm-6 col-md-3">
+						<div class="col-md-4 mb-3">
 							<div class="card card-stats card-round">
 								<div class="card-body">
 									<div class="row align-items-center">
@@ -98,7 +98,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-6 col-md-3">
+						<div class="col-md-4 mb-3">
 							<div class="card card-stats card-round">
 								<div class="card-body">
 									<div class="row align-items-center">
@@ -133,45 +133,13 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-6 col-md-3">
-							<div class="card card-stats card-round">
-								<div class="card-body">
-									<div class="row align-items-center">
-										<a href="?halaman=sudah_acc_skd">
-											<div class="col-icon">
-												<div class="icon-big text-center icon-secondary bubble-shadow-small">
-													<i class="flaticon-envelope-1"></i>
-												</div>
-											</div>
-										</a>
-										<div class="col col-stats ml-3 ml-sm-0">
-											<div class="numbers">
-												<p class="card-category">SKD</p>
-												<?php
-													$sql = "SELECT * FROM data_request_skd WHERE status=0";
-													$query = mysqli_query($konek,$sql);
-													$data = mysqli_fetch_array($query,MYSQLI_BOTH);
-													$count = mysqli_num_rows($query);
-													$status = $data['status'];
-
-													// if($status=="1"){
-													// 	$count ="Belum ada request";
-													// }
-												
-													
-												?>
-												<h4 class="card-title"><?php echo $count;?></h4>
-											</div>
-											<a href="?halaman=sudah_acc_skd" class="btn btn-primary">Buka</a>
-										</div>
-									</div>
-								</div>
-							</div>
+						<div class="col-md-3">
+							
 						</div>
 					</div>
 				</div>
 <?php
-    }elseif($hak_akses=="Lurah"){
+    }elseif($hak_akses=="Sekdes"){
  ?>
 				<div class="panel-header bg-primary-gradient">
 					<div class="page-inner py-5">
@@ -187,7 +155,7 @@
 					<h4 class="page-title">TAMPIL REQUEST SURAT KETERANGAN SUDAH ACC STAF</h4>
 					<!-- Card With Icon States Background -->
 					<div class="row">
-						<div class="col-sm-6 col-md-3">
+						<div class="col-sm-6 col-md-4">
 								<div class="card card-stats card-round">
 									<div class="card-body ">
 										<div class="row align-items-center">
@@ -218,7 +186,7 @@
 									</div>
 								</div>
 						</div>
-						<div class="col-sm-6 col-md-3">
+						<div class="col-sm-6 col-md-4">
 							<div class="card card-stats card-round">
 								<div class="card-body">
 									<div class="row align-items-center">
@@ -248,7 +216,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-6 col-md-3">
+						<div class="col-sm-6 col-md-4">
 							<div class="card card-stats card-round">
 								<div class="card-body">
 									<div class="row align-items-center">
@@ -279,7 +247,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-6 col-md-3">
+						<!-- <div class="col-sm-6 col-md-3">
 							<div class="card card-stats card-round">
 								<div class="card-body">
 									<div class="row align-items-center">
@@ -294,22 +262,23 @@
 											<div class="numbers">
 												<p class="card-category">SKD</p>
 												<?php
-													$sql = "SELECT * FROM data_request_skd WHERE status=1";
-													$query = mysqli_query($konek,$sql);
-													$data = mysqli_fetch_array($query,MYSQLI_BOTH);
-													$count = mysqli_num_rows($query);
-													$status = $data['status'];
+													// $sql = "SELECT * FROM data_request_skd WHERE status=1";
+													// $query = mysqli_query($konek,$sql);
+													// $data = mysqli_fetch_array($query,MYSQLI_BOTH);
+													// $count = mysqli_num_rows($query);
+													// $status = $data['status'];
 
 													
 												?>
-												<h4 class="card-title"><?php echo $count;?></h4>
+												<h4 class="card-title"><?php 
+												// echo $count;?></h4>
 											</div>
 											<a href="?halaman=belum_acc_skd" class="btn btn-primary">Buka</a>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
  <?php

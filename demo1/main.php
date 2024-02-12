@@ -12,6 +12,11 @@
  <?php include '../konek.php';?>
 <!doctype html>
 <html lang="en">
+
+<div id="preloader"></div>
+
+
+
   <head>
   	<title>Desa Sangkanjoyo</title>
     <meta charset="utf-8">
@@ -23,16 +28,22 @@
 	
 	<link rel="stylesheet" href="header/css/style.css">
 
+	
+
 	</head>
 	<body>
 		
-		<div class="container-fluid px-md-5">
+	<div class="container-fluid px-md-5">
 			<div class="row justify-content-between">
 				<div class="col-md-8 order-md-last">
 					<div class="row">
-						<div class="col-md-6 text-center">
+					<div class="col-md-6 text-center">
+						<a class="navbar-brand" href="main2.php">
+							<br> <!-- Tambahkan baris ini untuk memberikan sedikit ruang di atas gambar -->
+							<img src="../demo1/img/pekalongan.png" width="100" height="auto" alt="Desa Sangkanjoyo">
 							<a class="navbar-brand" href="main.php">Desa Sangkanjoyo <span>Kecamatan Kajen, Kabupaten Pekalongan</span></a>
-						</div>
+						</a>
+					</div>
 						<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
 							<form action="#" class="searchform order-lg-last">
 			          
@@ -60,7 +71,7 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item active"><a href="?halaman=beranda" class="nav-link">Permohonan Surat</a></li>
+	        	<li class="nav-item"><a href="?halaman=beranda" class="nav-link">Permohonan Surat</a></li>
 	        	
 	        	<li class="nav-item "><a href="?halaman=tampil_pemohon" class="nav-link">Biodata Anda</a></li>
 	        	<li class="nav-item"><a href="?halaman=tampil_status" class="nav-link">Status Request</a></li>
@@ -193,5 +204,7 @@
   <script src="header/js/main.js"></script>
 
 	</body>
+
+	
 </html>
 

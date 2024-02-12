@@ -21,6 +21,37 @@
         $acc = $data['acc'];
         $keperluan = $data['keperluan'];
         $format4 = date('d F Y', strtotime($acc));
+        $pekerjaan = $data['pekerjaan'];
+        $no_kk = $data['no_kk'];
+        $penghasilan = $data['penghasilan'];
+        $formatted_penghasilan = number_format($penghasilan, 0, ',', '.');
+
+        
+        $no_surat=$data['no_surat'];
+        $rt = $data['rt'];
+        $rw = $data['rw'];
+        $no_surat_rt=$data['no_surat_rt'];
+
+        $bulan = date('n'); // Mendapatkan nomor bulan saat ini
+
+        // Daftar angka Romawi
+        $angkaRomawi = array(
+            1 => 'I',
+            2 => 'II',
+            3 => 'III',
+            4 => 'IV',
+            5 => 'V',
+            6 => 'VI',
+            7 => 'VII',
+            8 => 'VIII',
+            9 => 'IX',
+            10 => 'X',
+            11 => 'XI',
+            12 => 'XII'
+        );
+
+        $bulanRomawi = $angkaRomawi[$bulan]; // Mendapatkan angka Romawi berdasarkan nomor bulan saat ini
+        $tanggal_lahir = date('d F Y', strtotime($tgl));
 	}
 ?>
 <!DOCTYPE html>
@@ -28,212 +59,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CETAK SKD</title>
+    <title>CETAK SKP</title>
 </head>
 <body>
 
-    <table border="0" align="center">
-        <tr>
-        <td><img src="img/pekalongan.png" width="70" height="87" alt=""></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-            <td>
-            <center>
-                                                    <font size="4">PEMERINTAHAN KABUPATEN PEKALONGAN</font><br>
-                                                    <font size="4">KECAMATAN KAJEN</font><br>
-                                                    <font size="5"><b>DESA SANGKANJOYO</b></font><br>
-                                                    <font size="2"><i>Jalan Desa Sangkanjoyo No. 325 </i></font><br>
-                                                </center>
-            </td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        </tr>
-        <tr>
-            <td colspan="45"><hr color="black"></td>
-        </tr>
-    </table>
-    <br>
-    <table border="0" align="center">
-        <tr>
-            <td>
-                <center>
-                    <font size="4"><b>SURAT KETERANGAN / PENGANTAR</b></font><br>
-                    <hr style="margin:0px" color="black">
-                    <span>Nomor : 045.2 / <?php echo $id;?> / 29.07.05</span>
-                </center>
-            </td>
-        </tr>
-    </table>
-    <br>
-    <br>
-    <table border="0" align="center">
-        <tr>
-            <td>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yang bertanda tangan di bawah ini Kepala Desa Sangkanjoyo <br> Kabupaten Pekalongan, Menerangkan bahwa :
-            </td>
-        </tr>
-    </table>
-    <br>
-    <table border="0" align="center">
-        <tr>
-            <td>Nama</td>
-            <td>:</td>
-            <td><?php echo $nama;?></td>
-        </tr>
-        <tr>
-            <td>TTL</td>
-            <td>:</td>
-            <td><?php echo $tempat.", ".$format2;?></td>
-        </tr>
-        <tr>
-            <td>Jenis Kelamin</td>
-            <td>:</td>
-            <td><?php echo $jekel;?></td>
-        </tr>
-        <tr>
-            <td>Agama</td>
-            <td>:</td>
-            <td><?php echo $agama;?></td>
-        </tr>
-        <tr>
-            <td>Status Warga</td>
-            <td>:</td>
-            <td><?php echo $status_warga;?></td>
-        </tr>
-        <tr>
-            <td>No. NIK</td>
-            <td>:</td>
-            <td><?php echo $nik;?></td>
-        </tr>
-        <tr>
-            <td>Alamat</td>
-            <td>:</td>
-            <td><?php echo $alamat;?></td>
-        </tr>
-        <tr>
-            <td>Keperluan</td>
-            <td>:</td>
-            <td><?php echo $keperluan;?></td>
-        </tr>
-        <tr>
-            <td>Keterangan</td>
-            <td>:</td>
-            <?php
-                if($request=="DOMISILI"){
-                    $request="Surat Keterangan Domisili";
-                }
-            ?>
-            <td><?php echo $request;?></td>
-        </tr>
-    </table>
-    <br>
-    <table border="0" align="center">
-        <tr>
-            <td>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Demikian surat ini diberikan kepada yang bersangkutan agar dapat dipergunakan<br>&nbsp;&nbsp;&nbsp;&nbsp;untuk sebagaimana mestinya.
-            </td>
-        </tr>
-    </table>
-    <br>
-    <br>
-    <table border="0" align="center">
-        <tr>
-            <th></th>
-            <th width="100px"></th>
-            <th>Kabupaten Pekalongan, <?php echo $format4;?></th>
-        </tr>
-        <tr>
-            <td>Tanda tangan <br> Yang bersangkutan </td>
-            <td></td>
-            <td>Kepala Desa Sangkanjoyo </td>
-        </tr>
-        <tr>
-            <td rowspan="15"></td>
-            <td></td>
-            <td rowspan="15"></td>
-        </tr>
-        <tr>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-        </tr><tr>
-            <td></td>
-        </tr><tr>
-            <td></td>
-        </tr><tr>
-            <td></td>
-        </tr>
-        <tr>
-            <td><b style="text-transform:uppercase"><u>(<?php echo $nama;?>)</u></b></td>
-            <td></td>
-            <td><b><u>Rudi Hartono</u></b></td>
-        </tr>
+<div class="row">
+						<div class="col-md-12">
+							<div class="card">
+								<div class="card-body">
+                                    <table border="0" align="center">
+                                        <table border="0" align="center">
+                                            <tr>
+                                            <td><img src="img/pekalongan.png" width="70" height="87" alt=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                                <td>
+                                                    <center>
+                                                        <font size="4">PEMERINTAHAN KABUPATEN PEKALONGAN</font><br>
+                                                        <font size="4">KECAMATAN KAJEN</font><br>
+                                                        <font size="5"><b>DESA SANGKANJOYO</b></font><br>
+                                                        <font size="2"><i>Jalan Desa Sangkanjoyo No. 325 | ( 0285 ) 381872 | 51161 </i></font><br>
+                                                    </center>
+                                                </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="45"><hr color="black"></td>
+                                            </tr>
+                                        </table>
+                                      
+                                        
+                                        <table class="mx-auto" >
+                                            <tr>
+                                                <td class="pl-5" width="600px" ><p style="margin-left:105px;">No.  Kode Desa / Kelurahan : <br>33.26.08.22</p></td>
+                                            </tr>
+                                        </table>
+
+                                        <br>
+                                        <table border="0" align="center">
+                                            <tr>
+                                                <td>
+                                                    <center>
+                                                        <font size="4"><b>SURAT KETERANGAN / PENGANTAR </b></font><br>
+                                                        <hr style="margin:0px" color="black">
+                                                        <span>No : <?php echo $no_surat; ?> </span>
+    
+                                                    </center>
+                                                </td>
+                                                
+                                            </tr>
+                                        </table>
+                                        <br>
+                                        <br>
+                                        <table border="0" align="center">
+                                            <tr>
+                                                <td style="width:500px;">
+                                                    Yang bertanda tangan dibawah ini, 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:500px;">
+                                                Berdasarkan Surat Keterangan Ketua Rt <?php echo $rt ?> Rw <?php echo $rw ?> , No. <?php echo $no_surat_rt; ?>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <br>
+                                        
+                                        <table border="0" align="center" type="1">
+                                            <tr>
+                                                <td>Nama</td>
+                                                <td>:</td>
+                                                <td><?php echo $nama;?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tempat, Tanggal Lahir</td>
+                                                <td>:</td>
+                                                <td><?php echo $tempat.", ".$tanggal_lahir;?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Agama</td>
+                                                <td>:</td>
+                                                <td><?php echo $agama;?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pekerjaan</td>
+                                                <td>:</td>
+                                                <td><?php echo $pekerjaan;?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Alamat</td>
+                                                <td>:</td>
+                                                <td><?php echo $alamat;?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>No. NIK</td>
+                                                <td>:</td>
+                                                <td><?php echo $nik;?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>No. KK</td>
+                                                <td>:</td>
+                                                <td><?php echo $no_kk;?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Keperluan</td>
+                                                <td>:</td>
+                                                <td><?php echo $keperluan;?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Keterangan</td>
+                                                <td>:</td>
+                                                <?php 
+                                                    $request = "Yang bersangkutan diatas";
+                                                ?>
+                                                <td><?php echo $request;?></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <?php 
+                                                    $request =  "memiliki penghasilan sebesar Rp.". $formatted_penghasilan;
+                                                ?>
+                                                <td><?php echo $request;?></td>
+                                            </tr>
+                                        </table>
+                                        <br>
+                                        <br>
+                                        <table align="center">
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <th></th>
+                                                <th></th>
+                                                <td></td>
+                                                <td></td>
+                                                <th width="400px"></th>
+                                                <th align="right">Sangkanjoyo, <?php echo $format4;?></th>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <th></th>
+                                                <th></th>
+                                                <td></td>
+                                                <td align="center">Kepala Desa Sangkanjoyo</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="15"></td>
+                                                <td></td>
+                                                <td rowspan="15"></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr><tr>
+                                                <td></td>
+                                            </tr><tr>
+                                                <td></td>
+                                            </tr><tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <th></th>
+                                                <td></td>
+                                                <td align="center">RUDI HARTONO</td>
+                                            </tr>
+                                        </table>
+                                    </table>
+
+								</div>
+                                <div  class="mx-auto" style="width:500px;margin:auto; ">
+                                    <p>Catatan : *) Apabila ruangan ini tidak mencukupi harap ditulis pada lembar sebaliknya Dan dibubuhi stempel Desa/Kelurahan </p>
+                                </div>
+                            </div>
+						</div>
+					</div>
+			</div>
     </table>
 
 

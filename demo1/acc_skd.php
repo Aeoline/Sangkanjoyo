@@ -57,8 +57,9 @@
 														<input type="checkbox" name="check[$i]" value="<?php echo $id_request_skd;?>">
 															<input type="submit" name="acc" class="btn btn-primary btn-sm" value="ACC">
 															<div class="form-button-action">
-																<a type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Cek Data" href="?halaman=detail_skd&id_request_skd=<?= $id_request_skd;?>">
-																<i class="fa fa-edit"></i></a>
+                                                                    <a href="?halaman=detail_skd&id_request_skd=<?= $id_request_skd;?>" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary px-4 mb-1 text-white" data-original-title="Edit User">
+                                                                        Detail
+                                                                    </a>
 															</div>
 													</td>
                                                 </tr>

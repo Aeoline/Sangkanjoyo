@@ -121,7 +121,7 @@
 									</div>
 									<div class="card-body">
 										<div class="row justify-content-md-center">
-														<img src="../dataFoto/scan_ktp/<?php echo $ktp;?>" width="350" height="250" alt="">
+														<img src="../dataFoto/scan_ktp/<?php echo $ktp;?>" width="400" height="250" alt="">
 													
 										</div>
 									</div>
@@ -132,7 +132,7 @@
 									</div>
 									<div class="card-body">
 										<div class="row justify-content-md-center">
-										<img src="../dataFoto/scan_kk/<?php echo $kk;?>" width="300" height="300" alt="">
+										<img src="../dataFoto/scan_kk/<?php echo $kk;?>" width="400" height="250" alt="">
 										</div>
 									</div>
 								</div>

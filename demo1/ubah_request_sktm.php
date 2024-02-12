@@ -20,9 +20,9 @@ if(isset($_GET['id_request_sktm'])){
 					<div class="row">
 						<div class="col-md-12">	
 						<form method="POST" enctype="multipart/form-data">
-							<div class="card">
+							<div class="card" style="margin-top: 20px; margin-bottom: 20px;">
 								<div class="card-header">
-									<div class="card-title">UBAH REQUEST SKTM</div>
+									<div class="card-title">UBAH REQUEST SURAT KETERANGAN TIDAK MAMPU</div>
 								</div>
 								<div class="card-body">
 									<div class="row">
@@ -44,28 +44,34 @@ if(isset($_GET['id_request_sktm'])){
 													<input type="text" name="keperluan" class="form-control" value="<?= $keperluan?>" placeholder="Keperluan Anda.." autofocus>
 												</div>
 											</div>
-											<div class="col-md-6 col-lg-6">	
-                                                <div class="form-group">
-													<label>Scan KTP</label><br>
-                                                    <img src="../dataFoto/scan_ktp/<?= $ktp;?>" width="200" height="100" alt="">
-    
-												</div>	
-												<div class="form-group">
-													<input type="file" name="ktp" class="form-control" size="37">
+											<div class="col-md-5">
+												<div class="card mb-3 mt-3">
+													<div class="card-header">
+														<h4 class="card-title">KTP</h4>
+													</div>
+													<div class="card-body">
+														<div class="row justify-content-md-center">
+																		<img src="../dataFoto/scan_ktp/<?php echo $ktp;?>" width="400" height="250" alt="">
+																	
+														</div>
+													</div>
 												</div>
-												<div class="form-group">
-													<label>Scan KK</label><br>
-													<img src="../dataFoto/scan_kk/<?= $kk;?>" width="200" height="100" alt="">
-												</div>
-                                                <div class="form-group">
-													<input type="file" name="kk" class="form-control" size="37">
+												<div class="card">
+													<div class="card-header">
+														<h4 class="card-title">KK</h4>
+													</div>
+													<div class="card-body">
+														<div class="row justify-content-md-center">
+														<img src="../dataFoto/scan_kk/<?php echo $kk;?>" width="400" height="250" alt="">
+														</div>
+													</div>
 												</div>
 											</div>
 									</div>
 								</div>
 								<div class="card-action">
-									<button name="ubah" class="btn btn-success">Ubah</button>
-									<a href="?halaman=tampil_status" class="btn btn-default">Batal</a>
+									<button name="ubah" class="btn btn-success ml-3 px-3 mb-2">Ubah</button>
+									<a href="?halaman=tampil_status" class="btn btn-danger px-3 mb-2">Batal</a>
 								</div>
 							</div>
 						</div>

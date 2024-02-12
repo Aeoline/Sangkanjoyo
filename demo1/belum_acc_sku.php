@@ -5,7 +5,7 @@
                 <div class="page-inner">
 					<div class="row">
 						<div class="col-md-12">
-							<div class="card">
+							<div class="card" style="margin-top: 20px; margin-bottom: 20px;">
 								<div class="card-header">
 									<div class="d-flex align-items-center">
 									<h4 class="fw-bold text-uppercase">belum acc request surat keterangan usaha</h4>
@@ -60,8 +60,9 @@
 														</td> -->
 														<td>
 															<div class="form-button-action">
-																<a type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="View Surat" href="?halaman=view_sku&id_request_sku=<?= $id_request_sku;?>">
-																<i class="fa fa-edit"></i></a>
+                                                                    <a href="?halaman=view_sku&id_request_sku=<?= $id_request_sku;?>" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary px-3 mb-1 mt-1 text-white" data-original-title="Detail">
+                                                                        Verifikasi
+                                                                    </a>
 															</div>
 														</td>
 													</tr>

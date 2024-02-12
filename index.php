@@ -64,7 +64,7 @@
 										<span class="icon-bar"></span>
 									</button>
                 <!-- Brand -->
-                <a class="navbar-brand page-scroll sticky-logo" href="index.html">
+                <a class="navbar-brand page-scroll sticky-logo" href="index.php">
                   <h1><span> </span>Desa Sangkanjoyo</h1>
                   <!-- Uncomment below if you prefer to use an image logo -->
                   <!-- <img src="img/logo.png" alt="" title=""> -->
@@ -84,10 +84,10 @@
                   </li>
                   <!-- <li>
                     <a class="page-scroll" href="#team">Team</a>
-                  </li>
-                  <li>
-                    <a class="page-scroll" href="#portfolio">Portfolio</a>
                   </li> -->
+                  <li>
+                    <a class="page-scroll" href="login.php">Warga</a>
+                  </li>
                   <li>
                     <a class="page-scroll" href="pegawai.php">Pegawai</a>
                   </li>
@@ -111,9 +111,9 @@
   <div id="home" class="slider-area">
     <div class="bend niceties preview-2">
       <div id="ensign-nivoslider" class="slides">
-        <img src="img/slider/slider1.jpg" alt="" title="#slider-direction-1" />
-        <img src="img/slider/slider2.jpg" alt="" title="#slider-direction-2" />
-        <img src="img/slider/slider3.jpg" alt="" title="#slider-direction-3" />
+        <img src="img/slider/slider1.png" alt="" title="#slider-direction-1" />
+        <img src="img/slider/slider2.png" alt="" title="#slider-direction-2" />
+        <img src="img/slider/slider3.png" alt="" title="#slider-direction-3" />
       </div>
 
       <!-- direction 1 -->
@@ -174,11 +174,11 @@
               <div class="slider-content">
                 <!-- layer 1 -->
                 <div class="layer-1-1 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                  <h2 class="title1">The Best business Information </h2>
+                  <h2 class="title1">Kontak dan Informasi Selanjutnya </h2>
                 </div>
                 <!-- layer 2 -->
                 <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
-                  <h1 class="title2">Helping Business Security  & Peace of Mind for Your Family</h1>
+                  <h1 class="title2">Silahkan hubungi kontak yang ada pada bagian 'Kontak dan Lokasi' dibawah jika ada keperluan</h1>
                 </div>
                 <!-- layer 3 -->
                 <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
@@ -210,7 +210,7 @@
           <div class="well-left">
             <div class="single-well">
               <a href="#">
-								  <img src="img/about/1.jpg" alt="">
+								  <img src="img/about/gapura.PNG" alt="">
 								</a>
             </div>
           </div>
@@ -220,26 +220,23 @@
           <div class="well-middle">
             <div class="single-well">
               <a href="#">
-                <h4 class="sec-head">project Maintenance</h4>
+                <h4 class="sec-head">Desa Indah Di Kabupaten Kajen</h4>
               </a>
               <p>
-                Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
+                Desa Sangkanjoyo merupakan sebuah desa yang terletak di Kabupaten Pekalongan, Tepatnya di Kecamatan Kajen. Desa Sangkanjoyo memiliki luas wilayah 1.000 Ha, dengan jumlah penduduk 3.000 jiwa. Desa Sangkanjoyo memiliki 4 RW dan 12 RT. Desa Sangkanjoyo memiliki 2 Dusun, yaitu Dusun Sangkan dan Dusun Joyo.
               </p>
               <ul>
                 <li>
-                  <i class="fa fa-check"></i> Interior design Package
+                  <i class="fa fa-check"></i> Balai Desa
                 </li>
                 <li>
-                  <i class="fa fa-check"></i> Building House
+                  <i class="fa fa-check"></i> Sekolah Dasar
                 </li>
                 <li>
-                  <i class="fa fa-check"></i> Reparing of Residentail Roof
+                  <i class="fa fa-check"></i> Sanggar Kebudayaan
                 </li>
                 <li>
-                  <i class="fa fa-check"></i> Renovaion of Commercial Office
-                </li>
-                <li>
-                  <i class="fa fa-check"></i> Make Quality Products
+                  <i class="fa fa-check"></i> Lapangan dan Taman Baca
                 </li>
               </ul>
             </div>
@@ -375,57 +372,53 @@
                 <h2>Prosedur Permohonan Surat</h2>
                 <p>
 
-                  <div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
-                    <div class="media service-box">
-                        <div class="pull-left">
-                            <img src="main/img/number.png" alt="">
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading" style="color: white;">Login</h4>
-                            <p>Pemohon Surat melakukan login, melalui halaman Login.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                  <!--/.col-md-4-->
+                <div class="col-md-6 col-sm-6 wow fadeInUp mb-3" data-wow-duration="300ms" data-wow-delay="0ms">
+                  <div class="media service-box">
+                      <div class="pull-left">
+                          <img src="main/img/number.png" alt="">
+                      </div>
+                      <div class="media-body">
+                          <h4 class="media-heading" style="color: white;">Login</h4>
+                          <p>Pemohon Surat melakukan login, melalui halaman Login.</p>
+                      </div>
+                  </div>
+              </div>
 
-                  <div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
-                    <div class="media service-box">
-                        <div class="pull-left">
-                            <img src="main/img/number2.png" alt="">
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading" style="color: white;">Menginput Data</h4>
-                            <p>Input data pemohon dengan sebelumnya melakukan Login dengan username dan password.</p>
-                        </div>
-                    </div>
-                </div>
-                <!--/.col-md-4-->
+              <div class="col-md-6 col-sm-6 wow fadeInUp mb-3" data-wow-duration="300ms" data-wow-delay="100ms">
+                  <div class="media service-box">
+                      <div class="pull-left">
+                          <img src="main/img/number2.png" alt="">
+                      </div>
+                      <div class="media-body">
+                          <h4 class="media-heading" style="color: white;">Menginput Data</h4>
+                          <p>Input data pemohon dengan sebelumnya melakukan Login dengan username dan password.</p>
+                      </div>
+                  </div>
+              </div>
 
-                <div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
-                    <div class="media service-box">
-                        <div class="pull-left">
-                            <img src="main/img/number3.png" alt="">
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading" style="color: white;">Mengajukan Surat Permohonan</h4>
-                            <p>Setelah input data pemohon dengan lengkap dan benar, Pemohon memilih Surat yang mau direquest serta melengkapi data request, Kemudian Dikirim dan Menunggu persetujuan dari Lurah.</p>
-                        </div>
-                    </div>
-                </div>
-                <!--/.col-md-4-->
+              <div class="col-md-6 col-sm-6 wow fadeInUp mb-3" data-wow-duration="300ms" data-wow-delay="200ms">
+                  <div class="media service-box">
+                      <div class="pull-left">
+                          <img src="main/img/number3.png" alt="">
+                      </div>
+                      <div class="media-body">
+                          <h4 class="media-heading" style="color: white;">Mengajukan Surat Permohonan</h4>
+                          <p>Setelah input data pemohon dengan lengkap dan benar, Pemohon memilih Surat yang mau direquest serta melengkapi data request, Kemudian Dikirim dan Menunggu persetujuan dari Sekretaris Desa.</p>
+                      </div>
+                  </div>
+              </div>
 
-                <div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
-                    <div class="media service-box">
-                        <div class="pull-left">
-                            <img src="main/img/number4.png" alt="">
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading" style="color: white;" >Permohonan Disetujui</h4>
-                            <p>Permohonan di setujui oleh lurah, kemudian staf akan mencetak surat sesuai request surat yang diajukan, pemohon mengambil surat yang sudah dicetak dan bertandatangan di Kantor Desa Sangkanjoyo.</p>
-                        </div>
-                    </div>
-                </div>
+              <div class="col-md-6 col-sm-6 wow fadeInUp mb-3" data-wow-duration="300ms" data-wow-delay="300ms">
+                  <div class="media service-box">
+                      <div class="pull-left">
+                          <img src="main/img/number4.png" alt="">
+                      </div>
+                      <div class="media-body">
+                          <h4 class="media-heading" style="color: white;">Permohonan Disetujui</h4>
+                          <p>Permohonan di setujui oleh sekretaris desa, kemudian staf akan mencetak surat sesuai request surat yang diajukan, pemohon mengambil surat yang sudah dicetak dan bertandatangan di Kantor Desa Sangkanjoyo.</p>
+                      </div>
+                  </div>
+              </div>
                 <!--/.col-md-4-->
                 </p>
                 <div class="row">
@@ -444,362 +437,7 @@
   </div>
   <!-- End Wellcome Area -->
 
-  <!-- Start team Area -->
-  <div id="team" class="our-team-area area-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="section-headline text-center">
-            <h2>Our special Team</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="team-top">
-          <div class="col-md-3 col-sm-3 col-xs-12">
-            <div class="single-team-member">
-              <div class="team-img">
-                <a href="#">
-										<img src="img/team/1.jpg" alt="">
-									</a>
-                <div class="team-social-icon text-center">
-                  <ul>
-                    <li>
-                      <a href="#">
-													<i class="fa fa-facebook"></i>
-												</a>
-                    </li>
-                    <li>
-                      <a href="#">
-													<i class="fa fa-twitter"></i>
-												</a>
-                    </li>
-                    <li>
-                      <a href="#">
-													<i class="fa fa-instagram"></i>
-												</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="team-content text-center">
-                <h4>Jhon Mickel</h4>
-                <p>Seo</p>
-              </div>
-            </div>
-          </div>
-          <!-- End column -->
-          <div class="col-md-3 col-sm-3 col-xs-12">
-            <div class="single-team-member">
-              <div class="team-img">
-                <a href="#">
-										<img src="img/team/2.jpg" alt="">
-									</a>
-                <div class="team-social-icon text-center">
-                  <ul>
-                    <li>
-                      <a href="#">
-													<i class="fa fa-facebook"></i>
-												</a>
-                    </li>
-                    <li>
-                      <a href="#">
-													<i class="fa fa-twitter"></i>
-												</a>
-                    </li>
-                    <li>
-                      <a href="#">
-													<i class="fa fa-instagram"></i>
-												</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="team-content text-center">
-                <h4>Andrew Arnold</h4>
-                <p>Web Developer</p>
-              </div>
-            </div>
-          </div>
-          <!-- End column -->
-          <div class="col-md-3 col-sm-3 col-xs-12">
-            <div class="single-team-member">
-              <div class="team-img">
-                <a href="#">
-										<img src="img/team/3.jpg" alt="">
-									</a>
-                <div class="team-social-icon text-center">
-                  <ul>
-                    <li>
-                      <a href="#">
-													<i class="fa fa-facebook"></i>
-												</a>
-                    </li>
-                    <li>
-                      <a href="#">
-													<i class="fa fa-twitter"></i>
-												</a>
-                    </li>
-                    <li>
-                      <a href="#">
-													<i class="fa fa-instagram"></i>
-												</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="team-content text-center">
-                <h4>Lellien Linda</h4>
-                <p>Web Design</p>
-              </div>
-            </div>
-          </div>
-          <!-- End column -->
-          <div class="col-md-3 col-sm-3 col-xs-12">
-            <div class="single-team-member">
-              <div class="team-img">
-                <a href="#">
-										<img src="img/team/4.jpg" alt="">
-									</a>
-                <div class="team-social-icon text-center">
-                  <ul>
-                    <li>
-                      <a href="#">
-													<i class="fa fa-facebook"></i>
-												</a>
-                    </li>
-                    <li>
-                      <a href="#">
-													<i class="fa fa-twitter"></i>
-												</a>
-                    </li>
-                    <li>
-                      <a href="#">
-													<i class="fa fa-instagram"></i>
-												</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="team-content text-center">
-                <h4>Jhon Powel</h4>
-                <p>Seo Expert</p>
-              </div>
-            </div>
-          </div>
-          <!-- End column -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Team Area -->
-
-  <!-- Start reviews Area -->
-  <div class="reviews-area hidden-xs">
-    <div class="work-us">
-      <div class="work-left-text">
-        <a href="#">
-						<img src="img/about/2.jpg" alt="">
-					</a>
-      </div>
-      <div class="work-right-text text-center">
-        <h2>working with us</h2>
-        <h5>Web Design, Ready Home, Construction and Co-operate Outstanding Buildings.</h5>
-        <a href="#contact" class="ready-btn">Contact us</a>
-      </div>
-    </div>
-  </div>
-  <!-- End reviews Area -->
-
-  <!-- Start portfolio Area -->
-  <div id="portfolio" class="portfolio-area area-padding fix">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <div class="section-headline text-center">
-            <h2>Our Portfolio</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <!-- Start Portfolio -page -->
-        <div class="awesome-project-1 fix">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="awesome-menu ">
-              <ul class="project-menu">
-                <li>
-                  <a href="#" class="active" data-filter="*">All</a>
-                </li>
-                <li>
-                  <a href="#" data-filter=".development">Development</a>
-                </li>
-                <li>
-                  <a href="#" data-filter=".design">Design</a>
-                </li>
-                <li>
-                  <a href="#" data-filter=".photo">Photoshop</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="awesome-project-content">
-          <!-- single-awesome-project start -->
-          <div class="col-md-4 col-sm-4 col-xs-12 design development">
-            <div class="single-awesome-project">
-              <div class="awesome-img">
-                <a href="#"><img src="img/portfolio/1.jpg" alt="" /></a>
-                <div class="add-actions text-center">
-                  <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="img/portfolio/1.jpg">
-                      <h4>Business City</h4>
-                      <span>Web Development</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- single-awesome-project end -->
-          <!-- single-awesome-project start -->
-          <div class="col-md-4 col-sm-4 col-xs-12 photo">
-            <div class="single-awesome-project">
-              <div class="awesome-img">
-                <a href="#"><img src="img/portfolio/2.jpg" alt="" /></a>
-                <div class="add-actions text-center">
-                  <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="img/portfolio/2.jpg">
-                      <h4>Blue Sea</h4>
-                      <span>Photosho</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- single-awesome-project end -->
-          <!-- single-awesome-project start -->
-          <div class="col-md-4 col-sm-4 col-xs-12 design">
-            <div class="single-awesome-project">
-              <div class="awesome-img">
-                <a href="#"><img src="img/portfolio/3.jpg" alt="" /></a>
-                <div class="add-actions text-center">
-                  <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="img/portfolio/3.jpg">
-                      <h4>Beautiful Nature</h4>
-                      <span>Web Design</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- single-awesome-project end -->
-          <!-- single-awesome-project start -->
-          <div class="col-md-4 col-sm-4 col-xs-12 photo development">
-            <div class="single-awesome-project">
-              <div class="awesome-img">
-                <a href="#"><img src="img/portfolio/4.jpg" alt="" /></a>
-                <div class="add-actions text-center">
-                  <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="img/portfolio/4.jpg">
-                      <h4>Creative Team</h4>
-                      <span>Web design</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- single-awesome-project end -->
-          <!-- single-awesome-project start -->
-          <div class="col-md-4 col-sm-4 col-xs-12 development">
-            <div class="single-awesome-project">
-              <div class="awesome-img">
-                <a href="#"><img src="img/portfolio/5.jpg" alt="" /></a>
-                <div class="add-actions text-center text-center">
-                  <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="img/portfolio/5.jpg">
-                      <h4>Beautiful Flower</h4>
-                      <span>Web Development</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- single-awesome-project end -->
-          <!-- single-awesome-project start -->
-          <div class="col-md-4 col-sm-4 col-xs-12 design photo">
-            <div class="single-awesome-project">
-              <div class="awesome-img">
-                <a href="#"><img src="img/portfolio/6.jpg" alt="" /></a>
-                <div class="add-actions text-center">
-                  <div class="project-dec">
-                    <a class="venobox" data-gall="myGallery" href="img/portfolio/6.jpg">
-                      <h4>Night Hill</h4>
-                      <span>Photoshop</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- single-awesome-project end -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- awesome-portfolio end -->
-  <!-- Start Testimonials -->
-  <div class="testimonials-area">
-    <div class="testi-inner area-padding">
-      <div class="testi-overly"></div>
-      <div class="container ">
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <!-- Start testimonials Start -->
-            <div class="testimonial-content text-center">
-              <a class="quate" href="#"><i class="fa fa-quote-right"></i></a>
-              <!-- start testimonial carousel -->
-              <div class="testimonial-carousel">
-                <div class="single-testi">
-                  <div class="testi-text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
-                    </p>
-                    <h6>Boby</h6>
-                  </div>
-                </div>
-                <!-- End single item -->
-                <div class="single-testi">
-                  <div class="testi-text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
-                    </p>
-                    <h6>Jhon</h6>
-                  </div>
-                </div>
-                <!-- End single item -->
-                <div class="single-testi">
-                  <div class="testi-text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
-                    </p>
-                    <h6>Fleming</h6>
-                  </div>
-                </div>
-                <!-- End single item -->
-              </div>
-            </div>
-            <!-- End testimonials end -->
-          </div>
-          <!-- End Right Feature -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Testimonials -->
+  
   <!-- Start Blog Area -->
   <div id="blog" class="blog-area">
     <div class="blog-inner area-padding">
@@ -808,7 +446,7 @@
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="section-headline text-center">
-              <h2>Latest News</h2>
+              <h2>Berita Terkini</h2>
             </div>
           </div>
         </div>
@@ -817,29 +455,25 @@
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="single-blog">
               <div class="single-blog-img">
-                <a href="blog.html">
-										<img src="img/blog/1.jpg" alt="">
+                <a href="wayang.php">
+										<img src="img/slider/wayang_kulit.png" alt="">
 									</a>
               </div>
               <div class="blog-meta">
-                <span class="comments-type">
-										<i class="fa fa-comment-o"></i>
-										<a href="#">13 comments</a>
-									</span>
                 <span class="date-type">
-										<i class="fa fa-calendar"></i>2016-03-05 / 09:10:16
+										<i class="fa fa-calendar"></i>27-01-2024
 									</span>
               </div>
               <div class="blog-text">
                 <h4>
-                                        <a href="blog.html">Assumenda repud eum veniam</a>
+                                        <a href="wayang.php">Sanggar Wayang Yudi Seto</a>
 									</h4>
                 <p>
-                  Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
+                  Sanggar Wayang yang dimiliki oleh Bapak Yudi Seto, sebuah usaha untuk melestarikan budaya wayang di Desa Sangkanjoyo.
                 </p>
               </div>
               <span>
-									<a href="blog.html" class="ready-btn">Read more</a>
+									<a href="wayang.php" class="ready-btn">Baca Selengkapnya</a>
 								</span>
             </div>
             <!-- Start single blog -->
@@ -849,29 +483,25 @@
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="single-blog">
               <div class="single-blog-img">
-                <a href="blog.html">
-										<img src="img/blog/2.jpg" alt="">
+                <a href="sidat.php">
+										<img src="img/blog/sidat.png" alt="">
 									</a>
               </div>
               <div class="blog-meta">
-                <span class="comments-type">
-										<i class="fa fa-comment-o"></i>
-										<a href="#">130 comments</a>
-									</span>
                 <span class="date-type">
-										<i class="fa fa-calendar"></i>2016-03-05 / 09:10:16
+										<i class="fa fa-calendar"></i>03-02-2024
 									</span>
               </div>
               <div class="blog-text">
                 <h4>
-                                        <a href="blog.html">Explicabo magnam quibusdam.</a>
+                                        <a href="sidat.php">Budidaya Ikan Sidat</a>
 									</h4>
                 <p>
-                  Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
+                  Rangkuman Materi Budidaya Ikan Sidat yang Dilakukan di Desa Sangkanjoyo oleh TIM I KKN UNDIP 2023/2024. Sosialisasi ini bertujuan untuk mengedukasi warga tentang tatacara budidaya ikan sidat.
                 </p>
               </div>
               <span>
-									<a href="blog.html" class="ready-btn">Read more</a>
+									<a href="sidat.php" class="ready-btn">Baca Selengkapnya</a>
 								</span>
             </div>
             <!-- Start single blog -->
@@ -881,29 +511,25 @@
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="single-blog">
               <div class="single-blog-img">
-                <a href="blog.html">
-										<img src="img/blog/3.jpg" alt="">
+                <a href="stevia.php">
+										<img src="img/blog/stevia.png" alt="">
 									</a>
               </div>
               <div class="blog-meta">
-                <span class="comments-type">
-										<i class="fa fa-comment-o"></i>
-										<a href="#">10 comments</a>
-									</span>
                 <span class="date-type">
-										<i class="fa fa-calendar"></i>2016-03-05 / 09:10:16
+										<i class="fa fa-calendar"></i>04-02-2024
 									</span>
               </div>
               <div class="blog-text">
                 <h4>
-                                        <a href="blog.html">Lorem ipsum dolor sit amet</a>
+                                        <a href="stevia.php">Budidaya Tanaman Stevia</a>
 									</h4>
                 <p>
-                  Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
+                Rangkuman Materi Budidaya Tanaman Stevia yang Dilakukan di Desa Sangkanjoyo oleh TIM I KKN UNDIP 2023/2024. Sosialisasi ini bertujuan untuk mengedukasi warga tentang tatacara budidaya tanaman stevia.
                 </p>
               </div>
               <span>
-									<a href="blog.html" class="ready-btn">Read more</a>
+									<a href="stevia.php" class="ready-btn">Baca Selengkapnya</a>
 								</span>
             </div>
           </div>
@@ -933,7 +559,7 @@
               <div class="single-icon">
                 <i class="fa fa-mobile"></i>
                 <p>
-                  Call: +1 5589 55488 55<br>
+                  Telfon: +62 857-8613-8948<br>
                   <span>Senin-Jumat (08:00 - 13:00)</span>
                 </p>
               </div>
@@ -945,8 +571,8 @@
               <div class="single-icon">
                 <i class="fa fa-envelope-o"></i>
                 <p>
-                  Email: info@example.com<br>
-                  <span>Web: www.example.com</span>
+                  Email: balaidesa.sangkanjoyo@gmail.com<br>
+                  <span>Web: www.sangkanjoyo.com</span>
                 </p>
               </div>
             </div>
@@ -957,8 +583,8 @@
               <div class="single-icon">
                 <i class="fa fa-map-marker"></i>
                 <p>
-                  Location: Desa Sangkanjoyo<br>
-                  <span>Kajen, Pekalongan, Indonesia</span>
+                  Lokasi: Desa Sangkanjoyo<br>
+                  <span>Kecamatan Kajen, Kabupaten Pekalongan, Indonesia</span>
                 </p>
               </div>
             </div>
@@ -978,7 +604,7 @@
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="copyright text-center">
               <p>
-                &copy; Desa Sangkanjoyo, Kajen, Pekalongan, Indonesia
+                &copy; Desa Sangkanjoyo, Kecamatan Kajen, Kabupaten Pekalongan, Indonesia
               </p>
             </div>
             <div class="credits">
@@ -1009,6 +635,8 @@
   <script src="contactform/contactform.js"></script>
 
   <script src="js/main.js"></script>
+
+  
 </body>
 
 </html>

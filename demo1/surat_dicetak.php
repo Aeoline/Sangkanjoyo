@@ -5,7 +5,7 @@
                 <div class="page-inner">
 					<div class="row">
 						<div class="col-md-12">
-							<div class="card">
+							<div class="card" style="margin-top: 20px; margin-bottom: 20px;">
 								<div class="card-header">
 									<div class="d-flex align-items-center">
 										<h4 class="card-title">PERMOHONAN SURAT SUDAH DICETAK</h4>

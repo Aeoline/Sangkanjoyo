@@ -10,6 +10,7 @@
 		$data = mysqli_fetch_array($query,MYSQLI_BOTH);
 		$nama = $data['nama'];
 		$nik = $data['nik'];
+		$no_kk= $data['no_kk'];
 		$tempat = $data['tempat_lahir'];
 		$tgl = $data['tanggal_lahir'];
 		$agama = $data['agama'];
@@ -22,13 +23,14 @@
 		$kk = $data['scan_kk'];
 		$keperluan = $data['keperluan'];;
 		$keterangan = $data['keterangan'];
+		$penghasilan = $data['penghasilan'];
 	}
 ?>
 				<div class="page-inner">
 					<form action="" method="POST" enctype="multipart/form-data">
 						<div class="row">
 							<div class="col-md-7">
-								<div class="card">
+								<div class="card mt-3">
 									<div class="card-header">
 												<div class="form-group">
 												<label>Keterangan</label>
@@ -50,6 +52,10 @@
 													<div class="form-group">
 														<label>NIK</label>
 														<input type="number" name="nik" value="<?php echo $nik;?>" class="form-control" placeholder="NIK Anda.." autofocus readonly>
+													</div>
+													<div class="form-group">
+														<label>NO KK</label>
+														<input type="number" name="nik" value="<?php echo $no_kk;?>" class="form-control" placeholder="NO KK Anda.." autofocus readonly>
 													</div>
 													<div class="form-group">
 														<label>Nama Lengkap</label>
@@ -100,7 +106,11 @@
 													</div>
 													<div class="form-group">
 														<label>Keperluan</label>
-														<input type="text" name="keperluan" value="<?php echo $keperluan;?>" class="form-control" placeholder="Telepon Anda..">
+														<input type="text" name="keperluan" value="<?php echo $keperluan;?>" class="form-control" placeholder="Keperluan Anda..">
+													</div>
+													<div class="form-group">
+														<label>Penghasilan</label>
+														<input type="text" name="keperluan" value="<?php echo $penghasilan;?>" class="form-control" placeholder="Penghasilan Anda.." readonly>
 													</div>
 												</div>
 										</div>
@@ -108,13 +118,13 @@
 								</div>
 							</div>
 							<div class="col-md-5">
-								<div class="card">
+								<div class="card mb-3 mt-3">
 									<div class="card-header">
 										<h4 class="card-title">KTP</h4>
 									</div>
 									<div class="card-body">
 										<div class="row justify-content-md-center">
-														<img src="../dataFoto/scan_ktp/<?php echo $ktp;?>" width="350" height="250" alt="">
+														<img src="../dataFoto/scan_ktp/<?php echo $ktp;?>" width="400" height="250" alt="">
 													
 										</div>
 									</div>
@@ -125,7 +135,7 @@
 									</div>
 									<div class="card-body">
 										<div class="row justify-content-md-center">
-										<img src="../dataFoto/scan_kk/<?php echo $kk;?>" width="300" height="300" alt="">
+										<img src="../dataFoto/scan_kk/<?php echo $kk;?>" width="400" height="250" alt="">
 										</div>
 									</div>
 								</div>

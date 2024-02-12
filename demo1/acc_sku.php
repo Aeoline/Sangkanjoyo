@@ -5,7 +5,7 @@
                 <div class="page-inner">
 					<div class="row">
 						<div class="col-md-12">
-							<div class="card">
+							<div class="card mt-3">
 								<div class="card-header">
 									<div class="d-flex align-items-center">
 									<h4 class="fw-bold text-uppercase">TAMPIL ACC REQUEST SURAT KETERANGAN USAHA</h4>
@@ -64,8 +64,9 @@
 															<input type="checkbox" name="check[$i]" value="<?php echo $id_request_sku;?>">
 															<input type="submit" name="acc" class="btn btn-primary btn-sm" value="ACC">
 															<div class="form-button-action">
-																<a type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Cek Data" href="?halaman=detail_sku&id_request_sku=<?= $id_request_sku;?>">
-																<i class="fa fa-edit"></i></a>
+                                                                    <a href="?halaman=detail_sku&id_request_sku=<?= $id_request_sku;?>" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary px-3 mb-1 mt-1 text-white" data-original-title="Detail">
+                                                                        Detail
+                                                                    </a>
 															</div>
 													</td>
                                                 </tr>

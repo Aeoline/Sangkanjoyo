@@ -5,10 +5,10 @@
                 <div class="page-inner">
 					<div class="row">
 						<div class="col-md-12">
-							<div class="card">
+							<div class="card" style="margin-top: 20px; margin-bottom: 20px;">
 								<div class="card-header">
 									<div class="d-flex align-items-center">
-									<h4 class="fw-bold text-uppercase"> tampil belum acc request surat keterangan lainnya</h4>
+									<h4 class="fw-bold text-uppercase"> tampil belum acc request surat keterangan penghasilan</h4>
 									</div>
 								</div>
 								<form action="" method="POST">
@@ -56,8 +56,9 @@
 														<td><img src="../dataFoto/scan_kk/<?php echo $kk;?>" width="50" height="50" alt=""></td>
 														<td>
 															<div class="form-button-action">
-																<a type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="View Surat" href="?halaman=view_skp&id_request_skp=<?= $id_request_skp;?>">
-																<i class="fa fa-edit"></i></a>
+                                                                    <a href="?halaman=view_skp&id_request_skp=<?= $id_request_skp;?>" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary px-3 mb-1 mt-1 text-white" data-original-title="Detail">
+                                                                        Verifikasi
+                                                                    </a>
 															</div>
 														</td>
 													</tr>

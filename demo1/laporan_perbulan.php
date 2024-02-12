@@ -11,7 +11,8 @@ date_default_timezone_set('Asia/Jakarta');
 		data_user.nama,
 		data_request_sktm.acc,
 		data_request_sktm.keperluan,
-		data_request_sktm.request
+		data_request_sktm.request,
+		data_request_sktm.no_surat
 	FROM
 		data_user
 	INNER JOIN data_request_sktm ON data_request_sktm.nik = data_user.nik
@@ -22,7 +23,8 @@ date_default_timezone_set('Asia/Jakarta');
 		data_user.nama,
 		data_request_skd.acc,
 		data_request_skd.keperluan,
-		data_request_skd.request
+		data_request_skd.request,
+		data_request_skd.no_surat
 	FROM
 		data_user
 	INNER JOIN data_request_skd ON data_request_skd.nik = data_user.nik
@@ -33,7 +35,8 @@ date_default_timezone_set('Asia/Jakarta');
 		data_user.nama,
 		data_request_skp.acc,
 		data_request_skp.keperluan,
-		data_request_skp.request
+		data_request_skp.request,
+		data_request_skp.no_surat
 	FROM
 		data_user
 	INNER JOIN data_request_skp ON data_request_skp.nik = data_user.nik
@@ -44,7 +47,8 @@ date_default_timezone_set('Asia/Jakarta');
 		data_user.nama,
 		data_request_sku.acc,
 		data_request_sku.keperluan,
-		data_request_sku.request
+		data_request_sku.request,
+		data_request_sku.no_surat
 	FROM
 		data_user
 	INNER JOIN data_request_sku ON data_request_sku.nik = data_user.nik
@@ -58,7 +62,8 @@ date_default_timezone_set('Asia/Jakarta');
 		data_user.nama,
 		data_request_skp.acc,
 		data_request_skp.keperluan,
-		data_request_skp.request
+		data_request_skp.request,
+		data_request_skp.no_surat
 	FROM
 		data_user
 	INNER JOIN data_request_skp ON data_request_skp.nik = data_user.nik
@@ -69,7 +74,8 @@ date_default_timezone_set('Asia/Jakarta');
 		data_user.nama,
 		data_request_sku.acc,
 		data_request_sku.keperluan,
-		data_request_sku.request
+		data_request_sku.request,
+		data_request_sku.no_surat
 	FROM
 		data_user
 	INNER JOIN data_request_sku ON data_request_sku.nik = data_user.nik
@@ -80,7 +86,8 @@ date_default_timezone_set('Asia/Jakarta');
 		data_user.nama,
 		data_request_skd.acc,
 		data_request_skd.keperluan,
-		data_request_skd.request
+		data_request_skd.request,
+		data_request_skd.no_surat
 	FROM
 		data_user
 	INNER JOIN data_request_skd ON data_request_skd.nik = data_user.nik
@@ -91,7 +98,8 @@ date_default_timezone_set('Asia/Jakarta');
 		data_user.nama,
 		data_request_sktm.acc,
 		data_request_sktm.keperluan,
-		data_request_sktm.request
+		data_request_sktm.request,
+		data_request_sktm.no_surat
 	FROM
 		data_user
 	INNER JOIN data_request_sktm ON data_request_sktm.nik = data_user.nik
@@ -163,6 +171,7 @@ date_default_timezone_set('Asia/Jakarta');
 										<thead>
 											<tr>
                                                 <th scope="col">No</th>
+												<th scope="col">No Surat</th>
                                                 <th scope="col">Tanggal ACC</th>
                                                 <th scope="col">NIK</th>
 												<th scope="col">Nama</th>
@@ -175,6 +184,7 @@ date_default_timezone_set('Asia/Jakarta');
 												$no=0;
 												while($data=mysqli_fetch_array($query,MYSQLI_BOTH)){
 													$no++;
+													$no_surat = $data['no_surat'];
 													$nik = $data['nik'];	
 													$nama = $data['nama'];
 													$tanggal = $data['acc'];
@@ -184,6 +194,7 @@ date_default_timezone_set('Asia/Jakarta');
 											?>
 											<tr>
 												<td><?php echo $no;?></td>
+												<td><?php echo $no_surat;?></td>
 												<td><?php echo $tgl;?></td>
 												<td><?php echo $nik;?></td>
 												<td><?php echo $nama;?></td>

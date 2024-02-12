@@ -13,7 +13,7 @@
 					<div class="row">
 						<div class="col-md-12">	
 						<form method="POST" enctype="multipart/form-data">
-							<div class="card">
+							<div class="card mt-3">
 								<div class="card-header">
 									<div class="card-title">FORM TAMBAH REQUEST SKTM</div>
 								</div>
@@ -43,18 +43,26 @@
 											<div class="col-md-6 col-lg-6">		
 												<div class="form-group">
 													<label>Scan KTP</label>
+													<div class="mt-1"> 
+													<small class="text-danger">Foto KTP tidak dapat diubah!</small>
+													</div>
 													<input type="file" name="ktp" class="form-control" size="37" required>
+													
 												</div>
 												<div class="form-group">
 													<label>Scan KK</label>
+													<div class="mt-1">
+													<small class="text-danger">Foto KK tidak dapat diubah!</small>
+													</div>
 													<input type="file" name="kk" class="form-control" size="37" required>
+													
 												</div>
 											</div>
 									</div>
 								</div>
 								<div class="card-action">
-									<button name="kirim" class="btn btn-success">Kirim</button>
-									<a href="?halaman=beranda" class="btn btn-default">Batal</a>
+									<button name="kirim" class="btn btn-success ml-3 mb-3 px-3">Kirim</button>
+									<a href="?halaman=beranda" class="btn btn-danger ml-2 mb-3 px-3">Batal</a>
 								</div>
 							</div>
 						</div>
@@ -71,7 +79,7 @@ if(isset($_POST['kirim'])){
 		$nama_kk = isset($_FILES['kk']);
     	$file_kk = $_POST['nik']."_".".jpg";
 	$sql = "INSERT INTO data_request_sktm (nik,scan_ktp,scan_kk,keperluan) VALUES ('$nik','$file_ktp','$file_kk','$keperluan')";
-	$query = mysqli_query($konek,$sql) or die (mysqli_error());
+	$query = mysqli_query($konek,$sql) or die (mysqli_error($konek));
 
 	if($query){
 		copy($_FILES['ktp']['tmp_name'],"../dataFoto/scan_ktp/".$file_ktp);
